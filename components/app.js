@@ -4,5 +4,6 @@ import { QuotaChart } from './quota-chart'
 export const App = () =>
 	<div>
 		<p>weyt</p>
-		<QuotaChart />
+		<QuotaChart quota={10} booked={210}/>
+		<QuotaChart quota={8} booked={210}/>
 	</div>
