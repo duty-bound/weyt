@@ -27,12 +27,23 @@ export class QuotaChart extends React.Component {
     const segmentAngle = 2 * Math.PI / n
     let x, y
 
+    //draw quota circles
     for(let i = 0; i < n; i++) {
       ctx.fillStyle = i < this.props.booked ? this.booked : this.vacant
       x = center + Math.sin(segmentAngle * i) * radius
       y = center - Math.cos(segmentAngle * i) * radius
       this.drawCircle(ctx, x, y, r)
     }
+
+    //draw text
+    ctx.font = "30px Arial"
+    ctx.textAlign = "center"
+    ctx.textBaseline = "middle"
+    ctx.fillStyle = this.booked
+    ctx.fillText(`${this.props.booked}`, center - (ctx.measureText(`${this.props.booked}/`).width / 2), center)
+    ctx.fillStyle = this.vacant
+    ctx.fillText(`/`, center, center)
+    ctx.fillText(`${n}`, center + (ctx.measureText(`/${n}`).width / 2), center)
   }
 
   render() {
