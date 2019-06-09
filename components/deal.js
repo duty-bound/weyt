@@ -3,25 +3,20 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { QuotaChart } from './quota-chart'
 
-const Product = styled.div`
+const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  background-color: crimson;
-  border: solid 1px black;
 `
 
 const ImageWrapper = styled.div`
-  border: solid 3px yellow;
 `
 
 const DetailsWrapper = styled.div`
-  border: solid 3px blue;
 `
 
 const QuotaChartWrapper = styled.div`
-  border: solid 3px green;
 `
 
 const productDetails = [
@@ -35,24 +30,16 @@ const productDetails = [
 ]
 
 export const Deal = (props) =>
-  <React.Fragment>
-  <Product>
-    <ImageWrapper>
-      <img src='../images/laptop.jpg' alt="image not found"/>
-    </ImageWrapper>
-    <DetailsWrapper>
-      <ul>
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-        {productDetails.map(detail => <li>{detail}</li>)}
-
-      </ul>
-    </DetailsWrapper>
+  <Flex>
+    <Flex>
+      <ImageWrapper>
+        <img src='../images/laptop.jpg' alt="image not found"/>
+      </ImageWrapper>
+      <DetailsWrapper>
+        <ul>
+          {productDetails.map(detail => <li>{detail}</li>)}
+        </ul>
+      </DetailsWrapper>
+    </Flex>
     <QuotaChart booked={10} quota={10} />
-  </Product>
-  </React.Fragment>
+  </Flex>

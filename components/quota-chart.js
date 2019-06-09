@@ -20,8 +20,8 @@ export class QuotaChart extends React.Component {
   componentDidMount() {
     const canvas = this.refs.canvas
     const ctx = canvas.getContext("2d")
-    ctx.canvas.width = 100
-    ctx.canvas.height = 100
+    ctx.canvas.width = 200
+    ctx.canvas.height = 200
     const center = canvas.width / 2
     const n = this.props.quota
     const r = 10
