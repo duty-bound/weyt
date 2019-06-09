@@ -1,8 +1,9 @@
 import React from 'react'
+import { Header } from './header'
 import { Deal } from './deal'
 
 export const App = () =>
 	<div>
-		<p>weyt</p>
+		<Header>weyt</Header>
 		<Deal />
 	</div>

@@ -37,7 +37,7 @@ export const Deal = (props) =>
       </ImageWrapper>
       <DetailsWrapper>
         <ul>
-          {productDetails.map(detail => <li>{detail}</li>)}
+          {productDetails.map((detail, i) => <li key={i}>{detail}</li>)}
         </ul>
       </DetailsWrapper>
     </Flex>
