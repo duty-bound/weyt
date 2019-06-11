@@ -29,6 +29,26 @@ const productDetails = [
   "Graphic Type - Integrated",
 ]
 
+const QuotaAndConsoleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+`
+
+const QuotaWrapper = styled.div`
+  margin: 20px;
+`
+
+const buttonHeight = 40;
+
+const Button = styled.button`
+  width: 100%;
+  height: 40px;
+  background-color: RGB(100, 100, 150);
+  border: none;
+  border-radius: 20px;
+`
+
 export const Deal = (props) =>
   <Flex>
     <Flex>
@@ -41,5 +61,10 @@ export const Deal = (props) =>
         </ul>
       </DetailsWrapper>
     </Flex>
-    <QuotaChart booked={10} quota={10} />
+    <QuotaAndConsoleWrapper>
+      <QuotaWrapper>
+        <QuotaChart booked={10} quota={10} />
+      </QuotaWrapper>
+      <Button>Order</Button>
+    </QuotaAndConsoleWrapper>
   </Flex>
