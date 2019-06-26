@@ -24,6 +24,7 @@ const ImageWrapper = styled.div`
 `
 
 const DetailsWrapper = styled.div`
+  margin-top: 20px;
 `
 
 const QuotaPriceWrapper = styled.div`
@@ -34,15 +35,21 @@ const QuotaPrice = styled.span`
   color: RGB(100, 100, 150);
 `
 
+const SavingDetail = styled.div`
+  font-size: 1.4em;
+  margin: 5px;
+  color: grey;
+`
+
 const Ul = styled.ul`
-  padding-left: 0;
+  padding-left: 5px;
   list-style-position: inside;
+  color: RGB(50, 50, 50);
 `
 
 const QuotaAndConsoleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 `
 
 const QuotaWrapper = styled.div`
@@ -51,8 +58,6 @@ const QuotaWrapper = styled.div`
 
 const QuotaChartWrapper = styled.div`
 `
-
-const buttonHeight = 40;
 
 const Button = styled.button`
   width: 100%;
@@ -70,7 +75,9 @@ export const Deal = (props) =>
       </ImageWrapper>
       <DetailsWrapper>
         <QuotaPriceWrapper>
-          <QuotaPrice>€300</QuotaPrice>
+          <QuotaPrice>€322</QuotaPrice>
+          <SavingDetail><span>Price on Supplier's website: €350</span></SavingDetail>
+          <SavingDetail><span>Saving: €28 (8%)</span></SavingDetail>
         </QuotaPriceWrapper>
         <Ul>
           {productDetails.map((detail, i) => <li key={i}>{detail}</li>)}
