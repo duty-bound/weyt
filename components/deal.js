@@ -13,6 +13,40 @@ const productDetails = [
   "Graphic Type - Integrated",
 ]
 
+const DealWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+`
+
+const Hr = styled.hr`
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: red;
+  border: 0 5px 0 0;
+`
+
+const Title = styled.div`
+  display: flex;
+  margin: 20px 0 0 40px;
+`
+
+const H3 = styled.h3`
+  font-size: 2.4em;
+  margin: 0;
+  color: RGB(70, 70, 70);
+`
+
+const DealBodyWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+`
+
 const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -68,26 +102,34 @@ const Button = styled.button`
 `
 
 export const Deal = (props) =>
-  <Flex>
-    <Flex>
-      <ImageWrapper>
-        <img src='../images/laptop.jpg' alt="image not found"/>
-      </ImageWrapper>
-      <DetailsWrapper>
-        <QuotaPriceWrapper>
-          <QuotaPrice>€322</QuotaPrice>
-          <SavingDetail><span>Price on Supplier's website: €350</span></SavingDetail>
-          <SavingDetail><span>Saving: €28 (8%)</span></SavingDetail>
-        </QuotaPriceWrapper>
-        <Ul>
-          {productDetails.map((detail, i) => <li key={i}>{detail}</li>)}
-        </Ul>
-      </DetailsWrapper>
-    </Flex>
-    <QuotaAndConsoleWrapper>
-      <QuotaWrapper>
-        <QuotaChart booked={10} quota={10} />
-      </QuotaWrapper>
-      <Button>Order</Button>
-    </QuotaAndConsoleWrapper>
-  </Flex>
+  <DealWrapper>
+    <Title>
+      <H3>
+        HP Spectre x360 - 13-ap0044tu
+      </H3>
+    </Title>
+    <DealBodyWrapper>
+      <Flex>
+        <ImageWrapper>
+          <img src='../images/laptop.jpg' alt="image not found"/>
+        </ImageWrapper>
+        <DetailsWrapper>
+          <QuotaPriceWrapper>
+            <QuotaPrice>€322</QuotaPrice>
+            <SavingDetail><span>Price on Supplier's website: €350</span></SavingDetail>
+            <SavingDetail><span>Saving: €28 (8%)</span></SavingDetail>
+          </QuotaPriceWrapper>
+          <Ul>
+            {productDetails.map((detail, i) => <li key={i}>{detail}</li>)}
+          </Ul>
+        </DetailsWrapper>
+      </Flex>
+      <QuotaAndConsoleWrapper>
+        <QuotaWrapper>
+          <QuotaChart booked={10} quota={10} />
+        </QuotaWrapper>
+        <Button>Order</Button>
+      </QuotaAndConsoleWrapper>
+    </DealBodyWrapper>
+    <Hr />
+  </DealWrapper>
