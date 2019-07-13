@@ -14,30 +14,23 @@ const productDetails = [
 ]
 
 const DealWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
 `
 
 const Hr = styled.hr`
   width: 95%;
   margin: auto;
   margin-top: 10px;
-  background-color: red;
   border: 0 5px 0 0;
 `
 
 const Title = styled.div`
-  display: flex;
   margin: 20px 0 0 40px;
 `
 
 const H3 = styled.h3`
   font-size: 2.4em;
   margin: 0;
-  color: RGB(70, 70, 70);
+  color: RGB(120, 120, 120);
 `
 
 const DealBodyWrapper = styled.div`
@@ -55,6 +48,7 @@ const Flex = styled.div`
 `
 
 const ImageWrapper = styled.div`
+  padding: 0 30px 0 30px;
 `
 
 const DetailsWrapper = styled.div`
@@ -84,6 +78,7 @@ const Ul = styled.ul`
 const QuotaAndConsoleWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `
 
 const QuotaWrapper = styled.div`
@@ -126,7 +121,7 @@ export const Deal = (props) =>
       </Flex>
       <QuotaAndConsoleWrapper>
         <QuotaWrapper>
-          <QuotaChart booked={10} quota={10} />
+          <QuotaChart booked={8} quota={10} />
         </QuotaWrapper>
         <Button>Order</Button>
       </QuotaAndConsoleWrapper>

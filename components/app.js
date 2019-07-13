@@ -2,8 +2,15 @@ import React from 'react'
 import { Header } from './header'
 import { Deal } from './deal'
 
-export const App = () =>
-	<div>
-		<Header>weyt</Header>
-		<Deal />
-	</div>
+export class App extends React.Component {
+
+	render() {
+		return (
+			<div>
+				<Header>weyt</Header>
+				<Deal />
+				<Deal />
+			</div>
+		)
+	}
+}
