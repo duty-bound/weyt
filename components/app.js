@@ -1,16 +1,10 @@
 import React from 'react'
 import { Header } from './header'
 import { Deal } from './deal'
+import { Deals } from './deals/index.js'
 
-export class App extends React.Component {
-
-	render() {
-		return (
-			<div>
-				<Header>weyt</Header>
-				<Deal />
-				<Deal />
-			</div>
-		)
-	}
-}
+export const App = () =>
+	<div>
+		<Header>weyt</Header>
+		<Deals />
+	</div>

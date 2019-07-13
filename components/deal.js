@@ -3,16 +3,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { QuotaChart } from './quota-chart'
 
-const productDetails = [
-  "Processor - Intel Core i5 8265U",
-  "Screen size - 15.6 Inch Full HD Screen",
-  "RAM - 8GB",
-  "SSD - 256GB",
-  "Operating System - Windows 10 Pro",
-  "Warranty - 1 year warranty",
-  "Graphic Type - Integrated",
-]
-
 const DealWrapper = styled.div`
 `
 
@@ -100,7 +90,7 @@ export const Deal = (props) =>
   <DealWrapper>
     <Title>
       <H3>
-        HP Spectre x360 - 13-ap0044tu
+        {props.deal.title}
       </H3>
     </Title>
     <DealBodyWrapper>
@@ -115,7 +105,7 @@ export const Deal = (props) =>
             <SavingDetail><span>Saving: €28 (8%)</span></SavingDetail>
           </QuotaPriceWrapper>
           <Ul>
-            {productDetails.map((detail, i) => <li key={i}>{detail}</li>)}
+            {props.deal.details.map((detail, i) => <li key={i}>{detail}</li>)}
           </Ul>
         </DetailsWrapper>
       </Flex>
